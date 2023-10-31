@@ -1,33 +1,33 @@
 class KubestellarCli < Formula
   desc "KubeStellar user facing commands and kubectl plugins"
   homepage "https://kubestellar.io"
-  version "v0.10.0"
+  version "v0.11.0"
 
   if OS.mac?
     case Hardware::CPU.arch
-    when :x86_64
-      url "https://github.com/kubestellar/kubestellar/releases/download/v0.10.0/kubestellaruser_v0.10.0_darwin_amd64.tar.gz"
-      sha256 "3fa1d88fd221b2d12aba0b9e81cb04f7f571f8ca15ecf785cba8278d1f0e0724"
     when :arm64
-      url "https://github.com/kubestellar/kubestellar/releases/download/v0.10.0/kubestellaruser_v0.10.0_darwin_arm64.tar.gz"
-      sha256 "3ea093a9e1ca16dda2b2bc554c55dccfbccf8554220477a06fbd41dae86f5608"  
+      url "https://github.com/kubestellar/kubestellar/releases/download/v0.11.0/kubestellaruser_v0.11.0_darwin_arm64.tar.gz"
+      sha256 "5be4c0b676e8a4f5985d09f2cfe6c473bd2f56ebd3ef4803ca345e6f04d83d6b"  
+    when :x86_64
+      url "https://github.com/kubestellar/kubestellar/releases/download/v0.11.0/kubestellaruser_v0.11.0_darwin_amd64.tar.gz"
+      sha256 "a79b3ad7edc996e6bf65884020c0ae2b40d8d8cdb3ec6b200594fe602b920c75"
     else
       odie "Unsupported architecture on macOS"
     end
   elsif OS.linux?
     case Hardware::CPU.arch
-    when :x86_64
-      url "https://github.com/kubestellar/kubestellar/releases/download/v0.10.0/kubestellaruser_v0.10.0_linux_amd64.tar.gz"
-      sha256 "e074588b7d4a786069d6183dbffea4b5ec27dda583c1fb49358694d4aaada5f3"
     when :arm64
-      url "https://github.com/kubestellar/kubestellar/releases/download/v0.10.0/kubestellaruser_v0.10.0_linux_arm64.tar.gz"
-      sha256 "fb5a47f8d67b1427f7e030ba9340022a185012ffcfcd9af8cf81ac4370109da7"
+      url "https://github.com/kubestellar/kubestellar/releases/download/v0.11.0/kubestellaruser_v0.11.0_linux_arm64.tar.gz"
+      sha256 "886254adc1064f3519974c2771f579313b0e96c83569a370aefb3d924271fd79"
+    when :x86_64
+      url "https://github.com/kubestellar/kubestellar/releases/download/v0.11.0/kubestellaruser_v0.11.0_linux_amd64.tar.gz"
+      sha256 "b2016263f74319077e19ca6825068062a395a4c32e04248e6a4b6235164d1214"
     when :s390x
-      url "https://github.com/kubestellar/kubestellar/releases/download/v0.10.0/kubestellaruser_v0.10.0_linux_s390x.tar.gz"
-      sha256 "e64466a6de0f40f7e7455deba5be5843582eb30d56cd23ae0bb6efe8f94c6e89"
+      url "https://github.com/kubestellar/kubestellar/releases/download/v0.11.0/kubestellaruser_v0.11.0_linux_s390x.tar.gz"
+      sha256 "4e5139489f28c6e95543209039b02019ebee8b7e9a5458a88e19cfbbeb2de5eb"
     when :ppc64
-      url "https://github.com/kubestellar/kubestellar/releases/download/v0.10.0/kubestellaruser_v0.10.0_linux_ppc64le.tar.gz"
-      sha256 "105a1dea6ec5e9c01be2cd55be563898255c644484e0c690613b081c02ca2368"
+      url "https://github.com/kubestellar/kubestellar/releases/download/v0.11.0/kubestellaruser_v0.11.0_linux_ppc64le.tar.gz"
+      sha256 "f215c2b47436adf4eddd67aaeaa73df4c97c61be011d9132318488674fc4b382"
     else
       odie "Unsupported architecture on Linux"
     end
